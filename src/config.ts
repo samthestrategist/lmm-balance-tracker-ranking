@@ -5,7 +5,7 @@
 // ============================================================
 
 // Product identity
-export const PRODUCT_NAME = "{{PRODUCT_NAME}}";
+export const COPY_PRODUCT_NAME = "{{COPY_PRODUCT_NAME}}";
 export const BRAND_NAME = "{{BRAND_NAME}}";
 
 // PDP URL (injected after PDP build deploys)
@@ -34,23 +34,23 @@ export const RANK_META_TITLE = "{{RANK_META_TITLE}}";
 export const RANK_META_DESC = "{{RANK_META_DESC}}";
 export const RANK_PUBLICATION_NAME = "{{RANK_PUBLICATION_NAME}}";
 export const RANK_UPDATED_DATE = "{{RANK_UPDATED_DATE}}";
-export const RANK_CATEGORY_HEADLINE = "{{RANK_CATEGORY_HEADLINE}}";
-export const RANK_EDITORIAL_INTRO = "{{RANK_EDITORIAL_INTRO}}";
+export const RANK_H1 = "{{RANK_H1}}";
+export const RANK_INTRO = "{{RANK_INTRO}}";
 
 // Product #1 (our product — featured)
 export const RANK_P1_NAME = "{{RANK_P1_NAME}}";
-export const RANK_P1_DESCRIPTION = "{{RANK_P1_DESCRIPTION}}";
+export const RANK_P1_VERDICT = "{{RANK_P1_VERDICT}}";
 export const RANK_P1_BULLET_1 = "{{RANK_P1_BULLET_1}}";
 export const RANK_P1_BULLET_2 = "{{RANK_P1_BULLET_2}}";
 export const RANK_P1_BULLET_3 = "{{RANK_P1_BULLET_3}}";
 export const RANK_P1_BULLET_4 = "{{RANK_P1_BULLET_4}}";
 export const RANK_P1_BULLET_5 = "{{RANK_P1_BULLET_5}}";
-export const RANK_P1_DISCOUNT_BADGE = "{{RANK_P1_DISCOUNT_BADGE}}";
+export const RANK_P1_BADGE = "{{RANK_P1_BADGE}}";
 
 // Product #2
 export const RANK_P2_NAME = "{{RANK_P2_NAME}}";
 export const RANK_P2_BRAND = "{{RANK_P2_BRAND}}";
-export const RANK_P2_DESCRIPTION = "{{RANK_P2_DESCRIPTION}}";
+export const RANK_P2_VERDICT = "{{RANK_P2_VERDICT}}";
 export const RANK_P2_BULLET_1 = "{{RANK_P2_BULLET_1}}";
 export const RANK_P2_BULLET_2 = "{{RANK_P2_BULLET_2}}";
 export const RANK_P2_BULLET_3 = "{{RANK_P2_BULLET_3}}";
@@ -59,7 +59,7 @@ export const RANK_P2_WEAKNESS = "{{RANK_P2_WEAKNESS}}";
 // Product #3
 export const RANK_P3_NAME = "{{RANK_P3_NAME}}";
 export const RANK_P3_BRAND = "{{RANK_P3_BRAND}}";
-export const RANK_P3_DESCRIPTION = "{{RANK_P3_DESCRIPTION}}";
+export const RANK_P3_VERDICT = "{{RANK_P3_VERDICT}}";
 export const RANK_P3_BULLET_1 = "{{RANK_P3_BULLET_1}}";
 export const RANK_P3_BULLET_2 = "{{RANK_P3_BULLET_2}}";
 export const RANK_P3_BULLET_3 = "{{RANK_P3_BULLET_3}}";
@@ -68,7 +68,7 @@ export const RANK_P3_WEAKNESS = "{{RANK_P3_WEAKNESS}}";
 // Product #4
 export const RANK_P4_NAME = "{{RANK_P4_NAME}}";
 export const RANK_P4_BRAND = "{{RANK_P4_BRAND}}";
-export const RANK_P4_DESCRIPTION = "{{RANK_P4_DESCRIPTION}}";
+export const RANK_P4_VERDICT = "{{RANK_P4_VERDICT}}";
 export const RANK_P4_BULLET_1 = "{{RANK_P4_BULLET_1}}";
 export const RANK_P4_BULLET_2 = "{{RANK_P4_BULLET_2}}";
 export const RANK_P4_WEAKNESS_1 = "{{RANK_P4_WEAKNESS_1}}";
@@ -103,21 +103,21 @@ export const RANK_DISCLAIMER = "{{RANK_DISCLAIMER}}";
 export const RANK_FOOTER_DISCLAIMER_2 = "{{RANK_FOOTER_DISCLAIMER_2}}";
 
 // Comparison table data
-export const RANK_TABLE_P1_RATING = "{{RANK_TABLE_P1_RATING}}";
-export const RANK_TABLE_P1_PRICE = "{{RANK_TABLE_P1_PRICE}}";
+export const RANK_TABLE_P1_SCORE = "{{RANK_TABLE_P1_SCORE}}";
+export const RANK_P1_PRICE = "{{RANK_P1_PRICE}}";
 export const RANK_TABLE_P1_GUARANTEE = "{{RANK_TABLE_P1_GUARANTEE}}";
 export const RANK_TABLE_P1_MECHANISM = "{{RANK_TABLE_P1_MECHANISM}}";
 export const RANK_TABLE_P1_FOR40 = "{{RANK_TABLE_P1_FOR40}}";
 export const RANK_TABLE_P1_DISCOUNT = "{{RANK_TABLE_P1_DISCOUNT}}";
-export const RANK_TABLE_P2_RATING = "{{RANK_TABLE_P2_RATING}}";
-export const RANK_TABLE_P2_PRICE = "{{RANK_TABLE_P2_PRICE}}";
-export const RANK_TABLE_P3_RATING = "{{RANK_TABLE_P3_RATING}}";
-export const RANK_TABLE_P3_PRICE = "{{RANK_TABLE_P3_PRICE}}";
-export const RANK_TABLE_P4_RATING = "{{RANK_TABLE_P4_RATING}}";
-export const RANK_TABLE_P4_PRICE = "{{RANK_TABLE_P4_PRICE}}";
+export const RANK_TABLE_P2_SCORE = "{{RANK_TABLE_P2_SCORE}}";
+export const RANK_P2_PRICE = "{{RANK_P2_PRICE}}";
+export const RANK_TABLE_P3_SCORE = "{{RANK_TABLE_P3_SCORE}}";
+export const RANK_P3_PRICE = "{{RANK_P3_PRICE}}";
+export const RANK_TABLE_P4_SCORE = "{{RANK_TABLE_P4_SCORE}}";
+export const RANK_P4_PRICE = "{{RANK_P4_PRICE}}";
 
 // Product ratings
-export const RANK_P1_RATING = "{{RANK_P1_RATING}}";
-export const RANK_P2_RATING = "{{RANK_P2_RATING}}";
-export const RANK_P3_RATING = "{{RANK_P3_RATING}}";
-export const RANK_P4_RATING = "{{RANK_P4_RATING}}";
+export const RANK_P1_SCORE = "{{RANK_P1_SCORE}}";
+export const RANK_P2_SCORE = "{{RANK_P2_SCORE}}";
+export const RANK_P3_SCORE = "{{RANK_P3_SCORE}}";
+export const RANK_P4_SCORE = "{{RANK_P4_SCORE}}";

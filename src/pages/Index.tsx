@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
-  PRODUCT_NAME,
+  COPY_PRODUCT_NAME,
   BRAND_NAME,
   PDP_URL,
   CDN_HERO_FRONT,
@@ -10,41 +10,41 @@ import {
   RANK_META_DESC,
   RANK_PUBLICATION_NAME,
   RANK_UPDATED_DATE,
-  RANK_CATEGORY_HEADLINE,
-  RANK_EDITORIAL_INTRO,
+  RANK_H1,
+  RANK_INTRO,
   RANK_P1_NAME,
-  RANK_P1_DESCRIPTION,
+  RANK_P1_VERDICT,
   RANK_P1_BULLET_1,
   RANK_P1_BULLET_2,
   RANK_P1_BULLET_3,
   RANK_P1_BULLET_4,
   RANK_P1_BULLET_5,
-  RANK_P1_DISCOUNT_BADGE,
-  RANK_P1_RATING,
+  RANK_P1_BADGE,
+  RANK_P1_SCORE,
   RANK_P2_NAME,
   RANK_P2_BRAND,
-  RANK_P2_DESCRIPTION,
+  RANK_P2_VERDICT,
   RANK_P2_BULLET_1,
   RANK_P2_BULLET_2,
   RANK_P2_BULLET_3,
   RANK_P2_WEAKNESS,
-  RANK_P2_RATING,
+  RANK_P2_SCORE,
   RANK_P3_NAME,
   RANK_P3_BRAND,
-  RANK_P3_DESCRIPTION,
+  RANK_P3_VERDICT,
   RANK_P3_BULLET_1,
   RANK_P3_BULLET_2,
   RANK_P3_BULLET_3,
   RANK_P3_WEAKNESS,
-  RANK_P3_RATING,
+  RANK_P3_SCORE,
   RANK_P4_NAME,
   RANK_P4_BRAND,
-  RANK_P4_DESCRIPTION,
+  RANK_P4_VERDICT,
   RANK_P4_BULLET_1,
   RANK_P4_BULLET_2,
   RANK_P4_WEAKNESS_1,
   RANK_P4_WEAKNESS_2,
-  RANK_P4_RATING,
+  RANK_P4_SCORE,
   RANK_FEATURE1_LABEL,
   RANK_FEATURE1_DESC,
   RANK_FEATURE2_LABEL,
@@ -65,18 +65,18 @@ import {
   RANK_FINAL_CTA_SUBTEXT,
   RANK_DISCLAIMER,
   RANK_FOOTER_DISCLAIMER_2,
-  RANK_TABLE_P1_RATING,
-  RANK_TABLE_P1_PRICE,
+  RANK_TABLE_P1_SCORE,
+  RANK_P1_PRICE,
   RANK_TABLE_P1_GUARANTEE,
   RANK_TABLE_P1_MECHANISM,
   RANK_TABLE_P1_FOR40,
   RANK_TABLE_P1_DISCOUNT,
-  RANK_TABLE_P2_RATING,
-  RANK_TABLE_P2_PRICE,
-  RANK_TABLE_P3_RATING,
-  RANK_TABLE_P3_PRICE,
-  RANK_TABLE_P4_RATING,
-  RANK_TABLE_P4_PRICE,
+  RANK_TABLE_P2_SCORE,
+  RANK_P2_PRICE,
+  RANK_TABLE_P3_SCORE,
+  RANK_P3_PRICE,
+  RANK_TABLE_P4_SCORE,
+  RANK_P4_PRICE,
 } from "../config";
 
 const COLORS = {
@@ -133,22 +133,22 @@ const Index = () => {
       badge: "BEST OVERALL",
       name: RANK_P1_NAME,
       brand: BRAND_NAME,
-      rating: RANK_P1_RATING,
+      rating: RANK_P1_SCORE,
       image: CDN_HERO_FRONT,
-      description: RANK_P1_DESCRIPTION,
+      description: RANK_P1_VERDICT,
       pros: [RANK_P1_BULLET_1, RANK_P1_BULLET_2, RANK_P1_BULLET_3, RANK_P1_BULLET_4, RANK_P1_BULLET_5],
       cta: PDP_URL,
       ctaText: "Visit Site →",
-      discountBadge: RANK_P1_DISCOUNT_BADGE,
+      discountBadge: RANK_P1_BADGE,
       ourProduct: true,
     },
     {
       rank: 2,
       name: RANK_P2_NAME,
       brand: RANK_P2_BRAND,
-      rating: RANK_P2_RATING,
+      rating: RANK_P2_SCORE,
       image: null,
-      description: RANK_P2_DESCRIPTION,
+      description: RANK_P2_VERDICT,
       pros: [RANK_P2_BULLET_1, RANK_P2_BULLET_2, RANK_P2_BULLET_3],
       weakness: RANK_P2_WEAKNESS,
       cta: PDP_URL,
@@ -159,9 +159,9 @@ const Index = () => {
       rank: 3,
       name: RANK_P3_NAME,
       brand: RANK_P3_BRAND,
-      rating: RANK_P3_RATING,
+      rating: RANK_P3_SCORE,
       image: null,
-      description: RANK_P3_DESCRIPTION,
+      description: RANK_P3_VERDICT,
       pros: [RANK_P3_BULLET_1, RANK_P3_BULLET_2, RANK_P3_BULLET_3],
       weakness: RANK_P3_WEAKNESS,
       cta: "#",
@@ -172,9 +172,9 @@ const Index = () => {
       rank: 4,
       name: RANK_P4_NAME,
       brand: RANK_P4_BRAND,
-      rating: RANK_P4_RATING,
+      rating: RANK_P4_SCORE,
       image: null,
-      description: RANK_P4_DESCRIPTION,
+      description: RANK_P4_VERDICT,
       pros: [RANK_P4_BULLET_1, RANK_P4_BULLET_2],
       weakness: `${RANK_P4_WEAKNESS_1} ${RANK_P4_WEAKNESS_2}`,
       cta: "#",
@@ -200,8 +200,8 @@ const Index = () => {
   const tableRows = [
     {
       product: `${RANK_P1_NAME} by ${BRAND_NAME}`,
-      rating: RANK_TABLE_P1_RATING,
-      price: RANK_TABLE_P1_PRICE,
+      rating: RANK_TABLE_P1_SCORE,
+      price: RANK_P1_PRICE,
       guarantee: RANK_TABLE_P1_GUARANTEE,
       mechanism: RANK_TABLE_P1_MECHANISM,
       for40: RANK_TABLE_P1_FOR40,
@@ -210,8 +210,8 @@ const Index = () => {
     },
     {
       product: `${RANK_P2_NAME} by ${RANK_P2_BRAND}`,
-      rating: RANK_TABLE_P2_RATING,
-      price: RANK_TABLE_P2_PRICE,
+      rating: RANK_TABLE_P2_SCORE,
+      price: RANK_P2_PRICE,
       guarantee: "30 days",
       mechanism: "❌ Soothing / color-correcting only",
       for40: "⚠️ General use; skews younger",
@@ -220,8 +220,8 @@ const Index = () => {
     },
     {
       product: `${RANK_P3_NAME} by ${RANK_P3_BRAND}`,
-      rating: RANK_TABLE_P3_RATING,
-      price: RANK_TABLE_P3_PRICE,
+      rating: RANK_TABLE_P3_SCORE,
+      price: RANK_P3_PRICE,
       guarantee: "30 days",
       mechanism: "❌ Anti-blemish focus only",
       for40: "❌ Wrong emotional fit for 40+",
@@ -230,8 +230,8 @@ const Index = () => {
     },
     {
       product: `${RANK_P4_NAME} by ${RANK_P4_BRAND}`,
-      rating: RANK_TABLE_P4_RATING,
-      price: RANK_TABLE_P4_PRICE,
+      rating: RANK_TABLE_P4_SCORE,
+      price: RANK_P4_PRICE,
       guarantee: "30 days",
       mechanism: "❌ Wound healing only",
       for40: "❌ Not for hormonal skin changes",
@@ -268,12 +268,12 @@ const Index = () => {
 
           {/* CATEGORY HEADLINE */}
           <h1 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: "clamp(26px, 5vw, 40px)", color: COLORS.headline, textAlign: "center", marginBottom: "16px", lineHeight: 1.2 }}>
-            {RANK_CATEGORY_HEADLINE}
+            {RANK_H1}
           </h1>
 
           {/* EDITORIAL INTRO */}
           <p style={{ fontSize: "17px", lineHeight: 1.8, color: COLORS.body, textAlign: "center", maxWidth: "680px", margin: "0 auto 40px" }}>
-            {RANK_EDITORIAL_INTRO}
+            {RANK_INTRO}
           </p>
 
           {/* PRODUCT CARDS */}
@@ -444,7 +444,7 @@ const Index = () => {
 
           {/* FINAL CTA */}
           <section style={{ background: `linear-gradient(135deg, ${COLORS.headline} 0%, #5C3D2E 100%)`, borderRadius: "24px", padding: "60px 40px", textAlign: "center", color: "#fff" }}>
-            <img src={CDN_AD_OVERLAY} alt={PRODUCT_NAME} style={{ maxWidth: "180px", borderRadius: "16px", marginBottom: "24px" }} />
+            <img src={CDN_AD_OVERLAY} alt={COPY_PRODUCT_NAME} style={{ maxWidth: "180px", borderRadius: "16px", marginBottom: "24px" }} />
             <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 4vw, 32px)", marginBottom: "16px" }}>
               Ready to Try Our #1 Pick?
             </h2>
